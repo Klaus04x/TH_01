@@ -129,6 +129,9 @@ const number = ({ navigation }) => {
 const verification = ({ navigation }) => {
   return (
     <View style={styles.numberContainer}>
+      <TouchableOpacity style={styles.btnBack} onPress={() => navigation.navigate('number')} >
+        <Text style={styles.btnBackText}>{'<'}</Text>
+      </TouchableOpacity>
       <Text style={styles.verificationText}>Enter your 4-digit code</Text>
       <Text style={styles.codeLabel}>Code</Text>
       <TextInput
@@ -194,7 +197,7 @@ const styles = StyleSheet.create({
   textBording: {
     position: 'absolute',
     alignItems: 'center',
-    bottom: 200, // Căn giữa dọc
+    bottom: 200, 
     left: 0,
     right: 0,
   },
@@ -202,7 +205,7 @@ const styles = StyleSheet.create({
     width: 253,
     height: 86,
     color: 'white',
-    fontFamily: 'Gilroy', // Đảm bảo bạn đã tải font này vào ứng dụng
+    fontFamily: 'Gilroy',
     fontWeight: '600',
     fontSize: 48,
     lineHeight: 42,
@@ -218,14 +221,14 @@ const styles = StyleSheet.create({
     lineHeight: 15,
     letterSpacing: 0,
     textAlign: 'center',
-    color: 'rgba(252, 252, 252, 0.34)', // Đã sửa lại màu sắc
+    color: 'rgba(252, 252, 252, 0.34)',
   },
   buttonBording: {
     position: 'absolute',
     backgroundColor: '#5eb078',
     width: 353,
     height: 67,
-    bottom: 100, // Căn giữa dọc
+    bottom: 100,
     left: 30.5,
     borderRadius: 15,
     justifyContent: 'center',
@@ -233,7 +236,7 @@ const styles = StyleSheet.create({
   },
   textbtnBording: {
     color: 'white',
-    fontWeight: '600', // Đã sửa lại định dạng
+    fontWeight: '600', 
     fontSize: 20,
   },
   SignInContainer:{
@@ -356,12 +359,11 @@ const styles = StyleSheet.create({
   },
   mobileNumberLabel: {
     fontFamily: 'Gilroy',
-    fontWeight: '600',
     fontSize: 18,
     lineHeight: 21,
     letterSpacing: 0,
     color: '#181725',
-    marginBottom: 10,
+    marginBottom: 30,
   },
   phoneInputContainer: {
     flexDirection: 'row',
@@ -395,23 +397,23 @@ const styles = StyleSheet.create({
     lineHeight: 29,
     letterSpacing: 0,
     color: '#181725',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   codeLabel: {
     fontFamily: 'Gilroy',
-    // fontWeight: '600',
     fontSize: 18,
     lineHeight: 21,
     letterSpacing: 0,
     color: '#181725',
-    marginBottom: 10,
+    marginTop: 10,
+    marginBottom: 30,
   },
   codeInput: {
-    flex: 1,
     fontSize: 18,
     borderBottomWidth: 1,
     borderColor: '#E2E2E2',
     paddingBottom: 5,
+    marginBottom: 5,
   },
 });
 
